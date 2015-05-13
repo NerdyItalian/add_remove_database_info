@@ -1,8 +1,28 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: rgb(178,125,93);
 }
 
-a {
-  color: #00B7FF;
+.jumbotron {
+    text-align: center;
+    font-family: 'Jura', sans-serif;
+    background-color: rgb(76, 178, 178);
 }
+
+.postDataDisplay {
+    text-align: center;
+    font-family: 'Jura', sans-serif;
+}
+
+.dataDisplay {
+    text-align: center;
+    font-family: 'Jura', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.well {
+    background-color: rgb(183,255,255);
+}
+

@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     $('.dataDisplay').on('click', '.removeData', function(){
         var dataId = $(this).data('id');
-        console.log("Data ID of Button" + dataId)
+        console.log("Data ID of Button" + dataId);
             for (var i = 0; i < databaseInfo.length; i++){
                 if (dataId == databaseInfo[i]._id){
                     console.log("Button ID to be removed" + databaseInfo[i]._id);
@@ -106,11 +106,12 @@ function displayData(data, template){
     $('.dataDisplay').empty();
     for(var j = 0; j < data.length; j++) {
         var temp = $(template);
+        var date = data[j].date_completed.slice(0,10);
         console.log("global" + databaseInfo);
 
         temp.find(".name").append("Name:" + data[j].name);
         temp.find(".score").append("Score:" + data[j].score);
-        temp.find(".date").append("Date:" + data[j].date_completed);
+        temp.find(".date").append("Date:" + date);
 
         temp.find('.removeData').attr('data-id', data[j]._id);
         $('.dataDisplay').append(temp);
