@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    $('.dataDisplay').append("do stuff!");
     getData();
+    getPostTemplate();
 
     $('.dataDisplay').on('click', '.removeData', function(){
         var dataId = $(this).data('id');
@@ -15,6 +15,27 @@ $(document).ready(function(){
 });
 
 var databaseInfo;
+
+/////////////////////
+//Get POST template
+////////////////////
+
+function getPostTemplate(){
+    $.ajax({
+        type: "GET",
+        url: "/postTemplate",
+        success: function(response){
+            console.log("Got the form template");
+            $(".postDataDisplay").append(response);
+        },
+        error: function(){
+            console.log("the form template didn't work");
+        },
+        complete: function(){
+            console.log("you have completed loading the template");
+        }
+    });
+}
 ///////////////////////////////////////////
 // this will delete data from the database
 ///////////////////////////////////////////
