@@ -17,7 +17,8 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next){
     Assignment.create(req.body, function(err, postBackData){
         if (err) return next("hey you have a CREATE error", err);
-        res.sendFile(path.resolve(__dirname, '../views/index.html'));
+        //res.sendFile(path.resolve(__dirname, '../views/index.html')); we dont do it this way because when you refresh it will duplicate the information
+        res.redirect('/');
     });
 });
 
