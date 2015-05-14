@@ -1,13 +1,13 @@
 <form action="/users" method="post">
     <label for="name">Name:</label>
-    <input name="name" id="name" type="text">
+    <input name="name" id="name" type="text" required="required">
     <br />
     <label for="score">Score:</label>
-    <input name="score" id="score" type="text">
+    <input name="score" id="score" type="number" required="required">
     <br />
 
     <label for="date_completed">Date:</label>
-    <input name="date_completed" id="date_completed" type="text">
+    <input name="date_completed" id="date_completed" type="date" required="required">
     <br/>
 
     <input class="btn-default" type="submit" value="Submit">
